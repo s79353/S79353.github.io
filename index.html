@@ -180,9 +180,25 @@
             border-bottom: none;
         }
 
-        /* Card 4 (Case Study) - Medium Box */
+        /* Card 4 (Case Study) - Medium Box with Internal Two-Column Layout */
         .card-case-study {
             grid-column: span 2;
+        }
+
+        .case-study-layout {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .case-study-info {
+            flex: 2;
+        }
+
+        .case-study-action {
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
         .experiment-title {
@@ -190,6 +206,29 @@
             font-weight: 700;
             color: var(--color-accent);
             margin-bottom: 0.5rem;
+        }
+
+        /* Button Styling */
+        .btn-lab-timer {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(6, 71, 137, 0.2);
+            border: 2px solid transparent;
+        }
+
+        .btn-lab-timer:hover {
+            background-color: var(--color-white);
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+            transform: scale(1.05);
         }
 
         /* Card 5 (Hobby) - Small Box */
@@ -256,6 +295,11 @@
                 min-height: 150px; 
             }
 
+            .case-study-layout {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .profile-name {
                 font-size: 1.5rem;
             }
@@ -307,8 +351,17 @@
         <section class="bento-card card-case-study">
             <div class="card-title">Recent Work / Case Study</div>
             <div class="card-content">
-                <div class="experiment-title">Starch Gelatinization in Local Kuih</div>
-                <p>Analyzing texture profiles of **Kuih Lapis** by measuring gelatinization temperatures and retrogradation rates to optimize shelf-life and sensory quality.  </p>
+                <div class="case-study-layout">
+                    <div class="case-study-info">
+                        <div class="experiment-title">Starch Gelatinization in Local Kuih</div>
+                        <p>Analyzing texture profiles of **Kuih Lapis** by measuring gelatinization temperatures and retrogradation rates to optimize shelf-life and sensory quality.</p>
+                    </div>
+                    <div class="case-study-action">
+                        <a href="https://s79353.github.io/lab-timer-app/" target="_blank" class="btn-lab-timer">
+                            <i class="fas fa-flask"></i> Try My Lab Timer App
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
